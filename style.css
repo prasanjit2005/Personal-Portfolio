@@ -1,0 +1,111 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+body{
+    background-color:  rgb(255 219 103);
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 5px; */
+    width: 100vw;
+    height: fit-content;
+}
+.right{
+    margin: 5px 5px;
+    height: fit-content;
+    width: 80%;
+    padding: 5px 5px;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12rem;
+}
+.profile_info{
+    width: 60%;
+    /* height: 2vh; */
+    margin: 5px 5px;
+    padding-left:10px;
+}
+.profile_info h1{
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    font-style: normal;
+}
+.profile_info h2{
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-style: normal;
+    margin-top: 1rem;
+}
+.type{
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+#text{
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-size: 6rem;
+    font-style: normal;
+}
+#cursor{
+    display: inline-block;
+    width: 8px;
+    height: 4.5rem;
+    margin-left: 0.5rem;
+    background-color: black;
+    animation: blink 0.6s infinite;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
+.profile_info button{
+    width: 12rem;
+    margin: 30px 10px 30px 0px;
+    padding: 12px 5px;
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 30px;
+    background-color:rgb(20, 20, 20) ;
+}
+.profile_info button:hover{
+    background-color:  rgb(255 219 103);
+    /* color: black; */
+}
+.profile_info button:hover a{
+    /* background-color:  rgb(255 219 103); */
+    color: black;
+}
+.profile_info button a{
+    text-decoration: none;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-style: normal;
+    color: white;
+}
+
+.profile_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    /* height: 2vh; */
+    margin: 5px 5px;
+}
+.profile_img img{
+    width: 90%;
+}
+.left{
+    margin: 5px 5px;
+    width: 20%;
+    /* height: 2vh; */
+}
