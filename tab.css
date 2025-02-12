@@ -1,0 +1,41 @@
+@media only screen and (min-width:770px) and (max-width:1200px) {
+    /* body{
+        background-color: white;
+    } */
+    .left{
+        position: fixed;
+        left:-25%;
+        height: 100%;
+        top: 0;
+        background-color: rgb(253 187 46);
+        
+    }
+    .left ul{
+        background-color: rgb(253 187 46);
+        width: 19%;
+    }
+    .right{
+        width: 100%;
+    }
+    .about-info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .about-content{
+        width: 90%;
+    }
+    .experience-outline{
+        top: 0px;
+    }
+    .menu{
+        display: block;
+    }
+    .back-heading{
+        font-size: 8rem;
+    }
+    #text{
+        font-size:5rem;;
+    }
+}

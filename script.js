@@ -47,7 +47,28 @@ document.addEventListener("scroll", function () {
 // left side menu trigger funtion
 document.addEventListener("scroll",function(){
     let scrollint=window.scrollY;
-    if(scrollint == 100){
-        
+    if(scrollint >= 0){
+        document.body.querySelector("#left-top").classList.add("change")
+        document.body.querySelector("#left-about").classList.remove("change")
     }
+    if(scrollint >300){
+        document.body.querySelector("#left-top").classList.remove("change")
+        document.body.querySelector("#left-services").classList.remove("change")
+        document.body.querySelector("#left-about").classList.add("change")
+    }
+    if(scrollint >950){
+        document.body.querySelector("#left-about").classList.remove("change")
+        document.body.querySelector("#left-services").classList.add("change")
+    }
+})
+// eventlister on triple line to toggle left menu
+    document.body.querySelector(".menu").addEventListener("click",()=>{
+    document.body.querySelector(".left").style.left=0;
+    document.body.querySelector("#close").style.display="block"
+    document.body.querySelector(".menu").style.display="none"
+})
+document.body.querySelector("#close").addEventListener("click",()=>{
+    document.body.querySelector(".left").style.left="-100%";
+    document.body.querySelector("#close").style.display="none"
+    document.body.querySelector(".menu").style.display="block"
 })

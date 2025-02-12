@@ -1,0 +1,88 @@
+@media only screen and (max-width:770px){
+    /* body{
+        background-color: white;
+    } */
+    .left{
+        position: fixed;
+        left:-100%;
+        height: 100%;
+        top: 0;
+        background-color: rgb(253 187 46);
+        width: 60%;
+        margin: 0px 0px;
+        z-index: 3;
+    }
+    .left ul{
+        width: 49%;
+        margin-left: 1rem;
+    }
+    .right{
+        width: 100%;
+    }
+    .profile{
+        flex-direction: column;
+    }
+    .profile_info{
+        width: 95%;
+    }
+    .profile_info h1{
+        font-size: 1.5rem;
+    }
+    #text{
+        font-size: 3rem;
+    }
+    #cursor{
+        height: 2.5rem;
+    }
+    .profile_info button a{
+        font-size: 1rem;
+    }
+    .profile_info button{
+        width: 10rem;
+    }
+    .profile_img{
+        width: 95%;
+    }
+    .about{
+        padding-left: 0rem;
+    }
+    .back-heading{
+        font-size: 3rem;
+        top:-2rem;
+        margin-left: 1rem;
+    }
+    .mid-heading{
+        font-size: 1rem;
+    }
+    .last-heading{
+        font-size: 2.5rem;
+    }
+    .about-info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .about-content{
+        width: 95%;
+    }
+    .about-cards{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .experience{
+        width: 90%;
+    }
+    .experience-outline{
+        top: 0px;
+    }
+    .services{
+        padding-left: 0px;
+    }
+    .service-card{
+        width: 80%;
+    }
+    .menu{
+        display: block;
+    }
+}

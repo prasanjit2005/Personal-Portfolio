@@ -20,6 +20,15 @@ body{
     height: fit-content;
     width: 80%;
     padding: 5px 5px;
+    position: relative;
+}
+.menu{
+    width: 30px;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    display:none;
+    transition: all 0.5s ease-out;
 }
 
 .profile{
@@ -264,6 +273,7 @@ body{
     margin: 5px 5px;
     width: 20%;
     position: relative;
+    transition: left 0.6s ease-out;
 }
 .left ul{
     position: fixed;
@@ -294,9 +304,13 @@ body{
     transition: width 0.5s ease-in-out;
     z-index: -1;
 }
-
+.change{
+    background-color: rgba(206, 153, 37, 0.741);
+    border-left: 4px solid rgba(0, 0, 0, 0.741);
+    transition: background-color .5s ease-in-out;
+}
 .left ul li:hover::before{
-    /* background-color: rgba(206, 153, 37, 0.741); */
+    
     width: 100%;
     border-left: 4px solid rgba(0, 0, 0, 0.741);
     cursor: pointer;
@@ -306,4 +320,6 @@ body{
     color: black;
     font-size: 1.3rem;
     position: relative;
+    animation-name: slide;
 }
+
