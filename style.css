@@ -1,18 +1,18 @@
 *{
     padding: 0px;
     margin: 0px;
-    
+    font-family: "Roboto", serif;
 }
 body{
-    background-color:  rgb(255 219 103);
+    background-color:  rgb(253 187 46);
 }
 
 .main{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     /* gap: 5px; */
-    width: 100vw;
+    width: 100%;
     height: fit-content;
 }
 .right{
@@ -104,8 +104,206 @@ body{
 .profile_img img{
     width: 90%;
 }
+
+/* Styling for About me section starts here */
+.about{
+    padding-left: 2rem;
+    margin-top: 15rem;
+    border-left: 7px solid black;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+    position: relative;
+    
+}
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+.back-heading{
+    font-size: 10rem;
+    /* margin: 15px 0px 15px 0px; */
+    font-weight: 800;
+    opacity: 0.2;
+    z-index: -1;
+    position: absolute;
+    top: -8rem;
+}
+.mid-heading{
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0px 0px 15px 35px;
+}
+.last-heading{
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 0px 0px 0px 35px;
+}
+.about-info{
+    margin-top: 2.5rem;
+    display: flex;
+}
+.about-content{
+    width: 70%;
+}
+.experience{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    border: 2px solid black;
+    z-index: 2;
+}
+
+.experience:hover #out1{
+    transform: rotate(0);
+}
+.experience:hover #out2{
+    transform: rotate(0);
+}
+.experience h2{
+    font-size: 10rem;
+    font-weight: 800;
+}
+.experience h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.experience-outline{
+    position: absolute;
+    top: 23px;
+    font-size: 10rem;
+    font-weight: 800;
+    -webkit-text-stroke: 1px #000;
+    -webkit-text-fill-color: transparent;
+    
+}
+#out1{
+    transform: rotate(-6deg);
+    transition: all .5s;
+}
+#out2{
+    transform: rotate(6deg);
+    transition: all .5s;
+}
+
+.about-content h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.about-content p{
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.about-cards{
+    display: flex;
+    justify-content: start;
+    gap: 70px;
+    margin-top: 2rem;
+}
+.cards-content{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* Services styling starts from here */
+.services{
+    padding-left: 2rem;
+    margin-top: 15rem;
+    border-left: 7px solid black;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out; 
+    position: relative;
+    
+}
+.service-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 12px;
+    
+}
+.service-card{
+    width: 40%;
+    border: 1px solid rgb(40, 40, 40);
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+}
+.serial-no{
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 1rem 1rem;
+    width: fit-content;
+}
+.service-heading{
+    margin-top:  2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 3px solid black;
+    width: fit-content;
+}
+.service-info ul{
+    margin-top: 2rem;
+}
+.service-info ul li{
+    list-style:circle;
+    margin-top: 12px;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
 .left{
     margin: 5px 5px;
     width: 20%;
-    /* height: 2vh; */
+    position: relative;
+}
+.left ul{
+    position: fixed;
+    top: 8rem;
+    /* right: 9rem; */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    border-left: 4px solid rgba(206, 153, 37, 0.741);
+    width:20%;
+}
+.left ul li{
+    /* background-color: rgba(206, 153, 37, 0.741); */
+    padding: 12px 12px;
+    position: relative;
+}
+.left ul li::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(206, 153, 37, 0.741);
+    transition: width 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.left ul li:hover::before{
+    /* background-color: rgba(206, 153, 37, 0.741); */
+    width: 100%;
+    border-left: 4px solid rgba(0, 0, 0, 0.741);
+    cursor: pointer;
+}
+.left ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    position: relative;
 }
