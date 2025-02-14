@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", typeEffect);
 document.addEventListener("scroll", function () {
     let about = document.querySelector(".about");
     let service = document.querySelector(".services");
+    let skill = document.querySelector(".skill");
+    let facts = document.querySelector("#fact");
     let scrollPosition = window.scrollY;
 
     if (scrollPosition > 200) { // Adjust the value as needed
@@ -42,6 +44,56 @@ document.addEventListener("scroll", function () {
     }
     if (scrollPosition > 800) {
         service.classList.add("show");
+    }
+    if (scrollPosition > 1500) {
+        skill.classList.add("show");
+    }
+    if (scrollPosition > 1800) {
+
+        let circles = document.body.querySelectorAll("circle");
+        circles.forEach((element,index) => {
+            if(index === 0){
+                element.style.animation = "progress 1s linear forwards"
+            }
+            else if(index === 1){
+                element.style.animation = "progress1 1s linear forwards"
+            }
+            else if(index === 2){
+                element.style.animation = "progress2 1s linear forwards"
+            }
+            else if(index === 3){
+                element.style.animation = "progress1 1s linear forwards"
+            }
+            else if(index === 4){
+                element.style.animation = "progress3 1s linear forwards"
+            }
+        });
+    }
+    if (scrollPosition > 1800){
+        const progressBar = document.querySelectorAll(".progress-bar");
+        progressBar.forEach((element,index) => {
+        if(index === 0){
+            element.style.width = "90%";
+        }
+        else if(index ===1){
+            element.style.width = "85%";
+        }
+        else if(index ===2){
+            element.style.width = "88%";
+        }
+        else if(index ===3){
+            element.style.width = "80%";
+        }
+        else if(index ===4){
+            element.style.width = "95%";
+        }
+        else if(index ===5){
+            element.style.width = "87%";
+        }
+    })
+    }
+    if (scrollPosition > 2000) {
+        facts.classList.add("show");
     }
 });
 // left side menu trigger funtion
@@ -58,8 +110,19 @@ document.addEventListener("scroll",function(){
     }
     if(scrollint >950){
         document.body.querySelector("#left-about").classList.remove("change")
+        document.body.querySelector("#left-skill").classList.remove("change")
         document.body.querySelector("#left-services").classList.add("change")
     }
+    if(scrollint >1500){
+        document.body.querySelector("#left-services").classList.remove("change")
+        document.body.querySelector("#left-facts").classList.remove("change")
+        document.body.querySelector("#left-skill").classList.add("change")
+    }
+    if(scrollint >2500){
+        document.body.querySelector("#left-skill").classList.remove("change")
+        document.body.querySelector("#left-facts").classList.add("change")
+    }
+
 })
 // eventlister on triple line to toggle left menu
     document.body.querySelector(".menu").addEventListener("click",()=>{
@@ -71,4 +134,62 @@ document.body.querySelector("#close").addEventListener("click",()=>{
     document.body.querySelector(".left").style.left="-100%";
     document.body.querySelector("#close").style.display="none"
     document.body.querySelector(".menu").style.display="block"
+})
+
+// Horizantal progress bar setting up
+document.body.querySelector(".fact-box").addEventListener("mousemove",(event)=>{
+    let left = document.querySelectorAll(".facts-outline")
+    left.forEach(a => {
+        if (event.movementX > 0){
+            a.style.left = "3px";
+        }else if (event.movementX < 0){
+            a.style.left = "-3px";
+        }
+    });
+    let top = document.querySelectorAll(".facts-outline")
+    top.forEach(b => {
+        if (event.movementY > 0){
+            b.style.top = "3px";
+        }else if (event.movementY < 0){
+            b.style.top = "-3px";
+        }
+    });
+    let left2 = document.querySelectorAll(".facts-outline2")
+    left2.forEach(c => {
+        if (event.movementX > 0){
+            c.style.left = "6px";
+        }else if (event.movementX < 0){
+            c.style.left = "-6px";
+        }
+    })
+    let top2 = document.querySelectorAll(".facts-outline2")
+    top2.forEach(d => {
+        if (event.movementY > 0){
+            d.style.top = "6px";
+        }else if (event.movementY < 0){
+            d.style.top = "-6px";
+        }
+    })
+    // console.log(event.offsetX)
+    // console.log(event.offsetY)
+
+    // if (event.movementX > 0) {
+    //     // Moving right
+    //     a.style.left = "3px";
+    //     left2.style.left = "6px";
+    // } else if (event.movementX < 0) {
+    //     // Moving left
+    //     a.style.left = "-3px";
+    //     left2.style.left = "-6px";
+    // }
+
+    // if (event.movementY > 0) {
+    //     // Moving down
+    //     top.style.top = "3px";
+    //     top2.style.top = "6px";
+    // } else if (event.movementY < 0) {
+    //     top.style.top = "-3px";
+    //     top2.style.top = "-6px";
+    // }
+    
 })
