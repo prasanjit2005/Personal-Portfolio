@@ -112,4 +112,29 @@
         padding-left: 1rem;
         margin-top: 0;
     }
+    .project-card{
+        width: 95%;
+    }
+    .slide{
+        width: 95%;
+    }
+    .contact-box{
+        flex-direction: column;
+    }
+    .contact-cards{
+        width: 95%;
+        justify-content: flex-start;
+    }
+    form{
+        flex-direction: column;
+    }
+    #name,#email,#message{
+        width: 90%;
+    }
+    .progress-bar{
+        width: 60%;
+    }
+    .navigation{
+        width: 40%;
+    }
 }

@@ -37,6 +37,10 @@ document.addEventListener("scroll", function () {
     let service = document.querySelector(".services");
     let skill = document.querySelector(".skill");
     let facts = document.querySelector("#fact");
+    let project = document.querySelector("#projects");
+    let works = document.querySelector("#works");
+    let testimonial = document.querySelector("#testimonials");
+    let contact = document.querySelector("#contacts");
     let scrollPosition = window.scrollY;
 
     if (scrollPosition > 200) { // Adjust the value as needed
@@ -95,6 +99,18 @@ document.addEventListener("scroll", function () {
     if (scrollPosition > 2000) {
         facts.classList.add("show");
     }
+    if (scrollPosition > 2300) {
+        project.classList.add("show");
+    }
+    if (scrollPosition > 3100) {
+        works.classList.add("show");
+    }
+    if (scrollPosition > 3700) {
+        testimonial.classList.add("show");
+    }
+    if (scrollPosition > 4200) {
+        contact.classList.add("show");
+    }
 });
 // left side menu trigger funtion
 document.addEventListener("scroll",function(){
@@ -118,9 +134,29 @@ document.addEventListener("scroll",function(){
         document.body.querySelector("#left-facts").classList.remove("change")
         document.body.querySelector("#left-skill").classList.add("change")
     }
-    if(scrollint >2500){
+    if(scrollint >3000){
         document.body.querySelector("#left-skill").classList.remove("change")
+        document.body.querySelector("#left-project").classList.remove("change")
         document.body.querySelector("#left-facts").classList.add("change")
+    }
+    if(scrollint >3700){
+        document.body.querySelector("#left-facts").classList.remove("change")
+        document.body.querySelector("#left-work").classList.remove("change")
+        document.body.querySelector("#left-project").classList.add("change")
+    }
+    if(scrollint >5000){
+        document.body.querySelector("#left-project").classList.remove("change")
+        document.body.querySelector("#left-work").classList.add("change")
+        document.body.querySelector("#left-testimonial").classList.remove("change")
+    }
+    if(scrollint >6000){
+        document.body.querySelector("#left-work").classList.remove("change")
+        document.body.querySelector("#left-testimonial").classList.add("change")
+        document.body.querySelector("#left-Contact").classList.remove("change")
+    }
+    if(scrollint >7000){
+        document.body.querySelector("#left-testimonial").classList.remove("change")
+        document.body.querySelector("#left-Contact").classList.add("change")
     }
 
 })
@@ -170,26 +206,64 @@ document.body.querySelector(".fact-box").addEventListener("mousemove",(event)=>{
             d.style.top = "-6px";
         }
     })
-    // console.log(event.offsetX)
-    // console.log(event.offsetY)
-
-    // if (event.movementX > 0) {
-    //     // Moving right
-    //     a.style.left = "3px";
-    //     left2.style.left = "6px";
-    // } else if (event.movementX < 0) {
-    //     // Moving left
-    //     a.style.left = "-3px";
-    //     left2.style.left = "-6px";
-    // }
-
-    // if (event.movementY > 0) {
-    //     // Moving down
-    //     top.style.top = "3px";
-    //     top2.style.top = "6px";
-    // } else if (event.movementY < 0) {
-    //     top.style.top = "-3px";
-    //     top2.style.top = "-6px";
-    // }
+    
     
 })
+// Testimonial Sliding animation setting up
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const progressBar = document.querySelector(".progress2");
+
+let currentSlide = 0;
+
+function updateSlide() {
+    slides.forEach((slide, index) => {
+        slide.classList.toggle("active", index === currentSlide);
+    });
+
+
+    // Update progress bar width
+    progressBar.style.width = `${((currentSlide + 1) / slides.length) * 100}%`;
+}
+
+prevBtn.addEventListener("click", () => {
+    if (currentSlide > 0) {
+        currentSlide--;
+        updateSlide();
+        clearInterval(setinterval);
+        setTimeout(() => {
+            interval()
+        }, 5000);
+
+    }
+});
+
+nextBtn.addEventListener("click", () => {
+    if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        updateSlide();
+        clearInterval(setinterval);
+        setTimeout(() => {
+            interval()
+        }, 5000);
+    }
+    
+});
+
+// Initialize
+let setinterval;
+function interval(){
+setinterval = setInterval(() => {
+    if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        updateSlide();
+    }
+    else{
+        currentSlide = 0;
+        updateSlide()
+    }
+}, 2000);
+}
+// updateSlide();
+interval()
