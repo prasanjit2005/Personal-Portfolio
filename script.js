@@ -42,17 +42,19 @@ document.addEventListener("scroll", function () {
     let testimonial = document.querySelector("#testimonials");
     let contact = document.querySelector("#contacts");
     let scrollPosition = window.scrollY;
+    // console.log(scrollPosition);
+    
 
     if (scrollPosition > 200) { // Adjust the value as needed
         about.classList.add("show");
     }
-    if (scrollPosition > 800) {
+    if (scrollPosition > 1100) {
         service.classList.add("show");
     }
-    if (scrollPosition > 1500) {
+    if (scrollPosition > 2000) {
         skill.classList.add("show");
     }
-    if (scrollPosition > 1800) {
+    if (scrollPosition > 2100) {
 
         let circles = document.body.querySelectorAll("circle");
         circles.forEach((element,index) => {
@@ -73,7 +75,7 @@ document.addEventListener("scroll", function () {
             }
         });
     }
-    if (scrollPosition > 1800){
+    if (scrollPosition > 2400){
         const progressBar = document.querySelectorAll(".progress-bar");
         progressBar.forEach((element,index) => {
         if(index === 0){
@@ -96,19 +98,19 @@ document.addEventListener("scroll", function () {
         }
     })
     }
-    if (scrollPosition > 2000) {
+    if (scrollPosition > 3100) {
         facts.classList.add("show");
     }
-    if (scrollPosition > 2300) {
+    if (scrollPosition > 4100) {
         project.classList.add("show");
     }
-    if (scrollPosition > 3100) {
+    if (scrollPosition > 5000) {
         works.classList.add("show");
     }
-    if (scrollPosition > 3700) {
+    if (scrollPosition > 6000) {
         testimonial.classList.add("show");
     }
-    if (scrollPosition > 4200) {
+    if (scrollPosition > 7000) {
         contact.classList.add("show");
     }
 });
@@ -124,12 +126,12 @@ document.addEventListener("scroll",function(){
         document.body.querySelector("#left-services").classList.remove("change")
         document.body.querySelector("#left-about").classList.add("change")
     }
-    if(scrollint >950){
+    if(scrollint >1000){
         document.body.querySelector("#left-about").classList.remove("change")
         document.body.querySelector("#left-skill").classList.remove("change")
         document.body.querySelector("#left-services").classList.add("change")
     }
-    if(scrollint >1500){
+    if(scrollint >1900){
         document.body.querySelector("#left-services").classList.remove("change")
         document.body.querySelector("#left-facts").classList.remove("change")
         document.body.querySelector("#left-skill").classList.add("change")
@@ -139,7 +141,7 @@ document.addEventListener("scroll",function(){
         document.body.querySelector("#left-project").classList.remove("change")
         document.body.querySelector("#left-facts").classList.add("change")
     }
-    if(scrollint >3700){
+    if(scrollint >4000){
         document.body.querySelector("#left-facts").classList.remove("change")
         document.body.querySelector("#left-work").classList.remove("change")
         document.body.querySelector("#left-project").classList.add("change")
